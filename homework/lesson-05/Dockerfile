@@ -8,8 +8,8 @@ COPY ["Pipfile", "Pipfile.lock", "./"]
 
 RUN pipenv install --system --deploy
 
-COPY ["flask_api.py", "./"]
+COPY ["flask_api_q6.py", "./"]
 
 EXPOSE 9696
 
-ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "flask_api:app"]
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "flask_api_q6:app"]
