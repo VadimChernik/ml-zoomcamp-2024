@@ -6,6 +6,8 @@ WORKDIR /app
 
 COPY ["Pipfile", "Pipfile.lock", "./"]
 
+RUN pipenv install --system --deploy
+
 COPY ["flask_api.py", "./"]
 
 EXPOSE 9696
