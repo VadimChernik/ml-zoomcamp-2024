@@ -15,12 +15,9 @@ spec:
       containers:
       - name: subscription
         image: svizor/zoomcamp-model:3.11.5-hw10
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "100m"            
+        resources:    
           limits:
-            memory: "64Mi"
-            cpu: "100m"
+            memory: "256Mi"
+            cpu: "0.5"
         ports:
         - containerPort: 9696
